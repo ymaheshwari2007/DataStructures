@@ -40,11 +40,19 @@ class LinkedList:
   def getLeft(self):
     firstNode = self.head
     self.head = firstNode.next
+    if self.head:
+      self.head.prev = None
+    else:
+      self.tail = None
     return firstNode
   
   def getRight(self):
     lastNode = self.tail
     self.tail = lastNode.prev
+    if self.tail:
+      self.tail.next = None
+    else:
+      self.head = None
     return lastNode
 
   
