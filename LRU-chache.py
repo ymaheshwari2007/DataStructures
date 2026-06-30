@@ -6,11 +6,12 @@ class Node:
     self.prev = None
 
 class LRUCache:
-
     def __init__(self, capacity: int):
       self.capacity = capacity
-      self.head = None
-      self.tail = None
+      self.head = Node(None)
+      self.tail = Node(None)
+      self.head.next = self.tail
+      self.tail.prev = self.head
       self.currentCap = 0
       self.cache = {}
 
@@ -32,6 +33,7 @@ class LRUCache:
         N.next = self.head
         self.head = N
       else:
+        
         
 
 
