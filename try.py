@@ -1,2 +1,3 @@
-s = "bfa"
-print(s[0:3])
+x = [3, 1, 2]
+result = x.sort()
+print(result)
